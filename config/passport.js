@@ -50,9 +50,9 @@ module.exports = function(passport) {
 
     passport.use(new GoogleStrategy({
 
-        clientID        : clientID,
-        clientSecret    : clientSecret,
-        callbackURL     : callbackURL,
+        clientID        : process.env.clientID,
+        clientSecret    : process.env.clientSecret,
+        callbackURL     : process.env.callbackURL,
 
     },
     function(token, refreshToken, profile, done) {
